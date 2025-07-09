@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,10 +28,13 @@ const PokemonSearch = () => {
         });
 
         if (response.ok) {
-          const responseText = await response.text();
+          const jsonResponse = await response.json();
           console.log('Pokemon enviado exitosamente al webhook');
-          console.log('Respuesta del webhook:', responseText);
-          setWebhookResponse(responseText);
+          console.log('Respuesta del webhook:', jsonResponse);
+          
+          // Extraer solo el texto legible de la respuesta
+          const readableText = jsonResponse.response || 'No se recibió respuesta del servidor';
+          setWebhookResponse(readableText);
         } else {
           console.error('Error al enviar Pokemon al webhook:', response.status);
           setWebhookResponse(`Error: ${response.status} - ${response.statusText}`);
