@@ -32,25 +32,6 @@ const Index = () => {
 
           {/* Componente de búsqueda */}
           <PokemonSearch />
-
-          {/* Información adicional */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-3">⚡</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Rápido</h3>
-              <p className="text-white/80">Búsquedas instantáneas con información actualizada</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-3">📚</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Completo</h3>
-              <p className="text-white/80">Información detallada de todos los Pokémon</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-3">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Preciso</h3>
-              <p className="text-white/80">Datos verificados y actualizados regularmente</p>
-            </div>
-          </div>
         </div>
       </div>
 
